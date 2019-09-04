@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@fab/static": "^0.1.6",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-fetch-hook": "^1.6.2",
@@ -12,8 +11,6 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "build:fab": "npm run build && npm run fab:compile",
-    "fab:compile": "fab-static build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

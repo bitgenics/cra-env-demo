@@ -1,12 +1,12 @@
-import React from 'react';
-import './App.css';
-import useFetch from 'react-fetch-hook'
+import React from "react";
+import "./App.css";
+import useFetch from "react-fetch-hook";
 
 const Component = () => {
   const { data: response } = useFetch(
     `https://www.reddit.com/r/WeatherGifs/top.json?t=week`
-  )
-  if (!response) return <div>Loading...</div>
+  );
+  if (!response) return <div>Loading...</div>;
 
   return (
     <div>
@@ -18,21 +18,21 @@ const Component = () => {
             loop
             muted
             style={{
-              maxWidth: '90vw',
-              maxHeight: '90vh'
+              maxWidth: "90vw",
+              maxHeight: "90vh"
             }}
             src={child.data.media.reddit_video.fallback_url}
           />
         ))}
     </div>
-  )
-}
+  );
+};
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Component/>
+        <Component />
       </header>
     </div>
   );
