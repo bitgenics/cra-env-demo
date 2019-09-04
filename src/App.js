@@ -3,9 +3,10 @@ import "./App.css";
 import useFetch from "react-fetch-hook";
 
 const Component = () => {
-  const { data: response } = useFetch(
-    `https://www.reddit.com/r/WeatherGifs/top.json?t=week`
-  );
+  const subreddit = process.env.REACT_APP_SUBREDDIT;
+  const url = `https://www.reddit.com/r/${subreddit}/top.json?t=week`;
+  const { data: response } = useFetch(url);
+  console.log({ response });
   if (!response) return <div>Loading...</div>;
 
   return (
